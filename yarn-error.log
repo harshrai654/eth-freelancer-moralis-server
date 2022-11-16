@@ -1,0 +1,78 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Harsh\.node\corepack\yarn\1.22.19\bin\yarn.js install
+
+PATH: 
+  C:\Program Files\PowerShell\7;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\Setup\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\PostgreSQL\13\bin;C:\Users\Harsh\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Harsh\AppData\Local\Programs\Python\Python39\;C:\Program Files\platform-tools;C:\Users\Harsh\AppData\Local\Microsoft\WindowsApps;C:\Users\Harsh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;C:\Users\Harsh\AppData\Roaming\npm;C:\adb;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\PowerShell\7\;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Harsh\AppData\Local\GitHubDesktop\bin;C:\Users\Harsh\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\Harsh\AppData\Local\Programs\oh-my-posh\bin;C:\Users\Harsh\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\EaseUS\Todo Backup\bin\x64\
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@moralisweb3%2fparse-server: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\Harsh\.node\corepack\yarn\1.22.19\lib\cli.js:141517:19)
+      at Object.onceWrapper (node:events:627:28)
+      at ClientRequest.emit (node:events:513:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:814:9)
+      at Object.onceWrapper (node:events:627:28)
+      at TLSSocket.emit (node:events:525:35)
+      at TLSSocket.Socket._onTimeout (node:net:526:8)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
+
+npm manifest: 
+  {
+    "name": "demo-parse-server-migration",
+    "version": "1.1.0",
+    "main": "dist/index.js",
+    "private": true,
+    "dependencies": {
+      "@moralisweb3/parse-server": "2.7.0",
+      "@codemirror/language": "^0.20.0",
+      "@moralisweb3/core": "^2.7.0",
+      "@types/node": "^18.7.15",
+      "dotenv": "^16.0.1",
+      "envalid": "7.3.1",
+      "express": "^4.18.1",
+      "express-rate-limit": "^6.5.1",
+      "graphql": "^16.6.0",
+      "graphql-ws": "^5.10.1",
+      "moralis": "^2.7.0",
+      "parse-server": "^5.2.7"
+    },
+    "devDependencies": {
+      "@moralisweb3/eslint-config": "^1.0.0",
+      "@typescript-eslint/eslint-plugin": "^5.12.0",
+      "@typescript-eslint/parser": "^5.12.0",
+      "axios": "^0.27.2",
+      "eslint": "^8.9.0",
+      "eslint-plugin-etc": "^2.0.2",
+      "eslint-plugin-import": "^2.26.0",
+      "mongodb-runner": "^4.9.0",
+      "prettier": "^2.7.1",
+      "ts-node": "^10.9.1",
+      "typescript": "^4.7.4"
+    },
+    "scripts": {
+      "dev": "ts-node src/index.ts",
+      "start": "node build/index.js",
+      "build": "tsc",
+      "lint": "eslint --ext .js,.ts .",
+      "format": "prettier --write 'src/**/*.{js,ts}'",
+      "dev:db-start": "mongodb-runner start",
+      "dev:db-stop": "mongodb-runner stop",
+      "gen:cloud": "ts-node ./scripts/generateCloudCode.ts",
+      "tsc": "tsc"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
